@@ -489,19 +489,19 @@ const LESSONS_REAL_TANDARTS = [
         <tr class="total"><td>TOTAAL EIGEN VERMOGEN (Code 10/15)</td><td class="n">${eur(RT.eigenVermogen)}</td><td class="n">90,4 %</td><td>Solvabiliteit van meer dan 90 %!</td></tr>
       </table>
 
-      <div class="callout"><strong>De Triomf van de Liquidatiereserve (${eur(RT.liquidatiereserve)}):</strong><br>
-      In plaats van jaarlijks dividenden uit te keren tegen het standaardtarief van 30 % roerende voorheffing, heeft deze tandarts zijn winsten systematisch gereserveerd via de <em>liquidatiereserve</em>:<br>
+      <div class="callout"><strong>De Kracht van de Liquidatiereserve (${eur(RT.liquidatiereserve)}):</strong><br>
+      In plaats van dividenden uit te keren tegen het klassieke standaardtarief van 30 % roerende voorheffing, reserveert de praktijk haar winsten via de <em>liquidatiereserve</em>:<br>
       1. Bij aanleg betaalt de vennootschap een eenmalige anticipatieve heffing van <strong>10 %</strong>.<br>
-      2. Na een wachttijd van 5 jaar kan de tandarts dit geld privé uitkeren tegen slechts <strong>5 % bijkomende roerende voorheffing</strong>.<br>
-      3. Totale belastingdruk: amper <strong>13,64 %</strong> in plaats van de klassieke 30 %! Dit verklaart de gigantische vermogensopbouw in de vennootschap.</div>`,
+      2. Na een wachttijd van <strong>3 jaar</strong> kan de tandarts dit geld privé uitkeren tegen <strong>9,3 % bijkomende roerende voorheffing</strong> (in plaats van de vroegere regeling van 5 jaar en 5 %).<br>
+      3. De totale belastingdruk blijft hiermee aanzienlijk voordeliger dan het gewone dividendtarief van 30 %. Dit verklaart de enorme vermogensopbouw van ${eur(RT.liquidatiereserve)} in de vennootschap.</div>`,
     exercise: (box) => exerciseNumbers(box, "Oefening: bereken de solvabiliteitsgraad",
       `Het eigen vermogen bedraagt ${eur(RT.eigenVermogen)} en het totale passief bedraagt ${eur(RT.balanstotaal22)}. Bereken het percentage eigen vermogen (de solvabiliteit).`,
       [{ label: "Solvabiliteit (%)", ans: RT.solvabiliteit, tol: 0.2 }],
       "Tip: deel het eigen vermogen door het balanstotaal en vermenigvuldig met 100."),
     quiz: [
       { q: "Wat is het percentage eigen vermogen (solvabiliteit) van Real Tandarts BV?", o: ["90,4 %", "50,0 %", "12,5 %"], a: 0, why: "€ 398.184 eigen vermogen op € 440.340 totaal passief geeft een buitengewone solvabiliteit van 90,43%." },
-      { q: "Wat is het grote fiscale voordeel van een liquidatiereserve t.o.v. een gewoon dividend?", o: ["Er is helemaal geen belasting verschuldigd", "De roerende voorheffing daalt na 5 jaar wachttijd naar 5% (totale druk ~13,64% i.p.v. 30%)", "De vennootschap krijgt een subsidie van het RIZIV"], a: 1, why: "Door 10% anticipatief en na 5 jaar 5% bijkomend te betalen, bespaart de arts meer dan de helft aan roerende voorheffing." },
-      { q: "Kan de tandarts de liquidatiereserve van € 383.923 zomaar morgen integraal cash opnemen?", o: ["Ja, het staat op de bank", "Neen, want € 162.935 zit al vast in de debet rekening-courant en er moet rekening gehouden worden met de 5-jarige wachttermijn", "Neen, want de staat eist 80% op"], a: 1, why: "Een aanzienlijk deel van de reserves is feitelijk al eerder privé opgenomen via de debet-stand van de rekening-courant!" }
+      { q: "Wat is het fiscale voordeel van een liquidatiereserve t.o.v. een gewoon dividend van 30%?", o: ["Er is helemaal geen belasting verschuldigd", "Na 3 jaar wachttijd bedraagt de bijkomende roerende voorheffing slechts 9,3% (i.p.v. het klassieke tarief van 30%)", "De vennootschap krijgt een subsidie van het RIZIV"], a: 1, why: "Door 10% anticipatief en na 3 jaar wachttijd slechts 9,3% bijkomende heffing te betalen, geniet de arts een substantieel fiscaal voordeel t.o.v. de 30% standaard roerende voorheffing." },
+      { q: "Kan de tandarts de liquidatiereserve van € 383.923 zomaar morgen integraal cash opnemen?", o: ["Ja, het staat op de bank", "Neen, want € 162.935 zit al vast in de debet rekening-courant en er moet rekening gehouden worden met de 3-jarige wachttermijn", "Neen, want de staat eist 80% op"], a: 1, why: "Een aanzienlijk deel van de reserves is feitelijk al eerder privé opgenomen via de debet-stand van de rekening-courant én de wettelijke wachttermijn (3 jaar) moet worden gerespecteerd." }
     ]
   },
   {
@@ -596,7 +596,7 @@ const LESSONS_REAL_TANDARTS = [
       <ol>
         <li>
           <strong>Stap 1: Ontmijn de Debet Rekening-Courant (${eur(RT.rcBestuurder)}) via de Liquidatiereserve</strong><br>
-          De tandarts moet <em>geen privé-geld storten</em> om zijn schuld aan de vennootschap in te lossen! De vennootschap bezit immers ruim <strong>${eur(RT.liquidatiereserve)} aan beschikbare liquidatiereserves</strong>. Door een dividenduitkering toe te kennen uit de 'oude' liquidatiereserves (onderworpen aan slechts 5 % roerende voorheffing), wordt het netto-dividend administratief verrekend met de debetstand van de rekening-courant.<br>
+          De tandarts moet <em>geen privé-geld storten</em> om zijn schuld aan de vennootschap in te lossen! De vennootschap bezit immers ruim <strong>${eur(RT.liquidatiereserve)} aan beschikbare liquidatiereserves</strong>. Door een dividenduitkering toe te kennen uit de liquidatiereserves (onderworpen aan slechts 9,3 % roerende voorheffing na 3 jaar wachttijd), wordt het netto-dividend administratief verrekend met de debetstand van de rekening-courant.<br>
           <em>Gevolg:</em> De debetstand zakt naar nul, de fiscus kan geen fictieve rente (VAA) meer belasten, en de jaarlijkse privébelastingfactuur daalt met duizenden euro's!
         </li>
         <li>
